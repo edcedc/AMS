@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:id="@+id/layout"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        app:rv_cornerRadius_TL="30dp"
+        android:visibility="gone"
+        app:rv_cornerRadius_TR="30dp"
+        app:rv_backgroundColor="@color/white"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.flyco.roundview.RoundFrameLayout
+                android:layout_gravity="center"
+                app:rv_cornerRadius="30dp"
+                app:rv_backgroundColor="@color/gray_c9c9ca"
+                android:layout_width="90dp"
+                android:layout_height="4dp" />
+
+            <FrameLayout
+                android:id="@+id/fy_del"
+                android:padding="10dp"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/icon_48" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.flyco.roundview.RoundFrameLayout
+                app:rv_backgroundColor="#F4F9FD"
+                app:rv_cornerRadius="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_select"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+
+            </com.flyco.roundview.RoundFrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sel"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="@string/select_all"
+                style="@style/Tv15black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_send"
+            android:background="?android:selectableItemBackground"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.flyco.roundview.RoundFrameLayout
+                app:rv_backgroundColor="#F4F9FD"
+                app:rv_cornerRadius="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:background="@mipmap/icon_55"
+                    android:layout_width="25dp"
+                    android:layout_gravity="center"
+                    android:layout_height="25dp" />
+
+            </com.flyco.roundview.RoundFrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="@string/seng"
+                style="@style/Tv15black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_delete"
+            android:background="?android:selectableItemBackground"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.flyco.roundview.RoundFrameLayout
+                app:rv_backgroundColor="#F4F9FD"
+                app:rv_cornerRadius="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:background="@mipmap/icon_54"
+                    android:layout_width="25dp"
+                    android:layout_gravity="center"
+                    android:layout_height="25dp" />
+
+            </com.flyco.roundview.RoundFrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="@string/delete"
+                style="@style/Tv15black" />
+
+        </LinearLayout>
+
+    </com.flyco.roundview.RoundLinearLayout>
+</layout>

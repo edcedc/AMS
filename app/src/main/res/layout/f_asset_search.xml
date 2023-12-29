@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.yyc.ams.viewmodel.AssetSearchmModel" />
+
+        <variable
+            name="click"
+            type="com.yyc.ams.ui.frg.AssetSearchFrg.ProxyClick" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_margin="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/circularProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cpb_background_progressbar_color="#b6bbd8"
+                    app:cpb_background_progressbar_width="10dp"
+                    app:cpb_indeterminate_mode="false"
+                    app:cpb_progress="0"
+                    app:cpb_progress_max="100"
+                    app:cpb_round_border="true"
+                    app:cpb_start_angle="0"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/colorPrimary"
+                    app:cpb_progressbar_width="20dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:text="@={viewmodel.rssi}"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    style="@style/Tv15black" />
+
+            </FrameLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+         <com.flyco.roundview.RoundTextView
+             android:onClick="@{()->click.start()}"
+             android:text="@={viewmodel.openStatus}"
+             android:textColor="@color/white"
+             app:rv_cornerRadius="10dp"
+             android:textSize="15sp"
+             android:gravity="center"
+             android:layout_margin="20dp"
+             android:padding="10dp"
+             android:layout_gravity="center"
+             app:rv_backgroundColor="@color/colorPrimary"
+             app:rv_backgroundPressColor="@color/colorPrimaryDark2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+</layout>

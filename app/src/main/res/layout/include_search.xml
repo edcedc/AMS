@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:background="@color/gray_ecf0ef"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.yyc.ams.weight.EditTextWithDrawable
+            android:id="@+id/et_text"
+            android:maxLines="1"
+            android:inputType="text"
+            android:background="@android:color/white"
+            android:textSize="12sp"
+            android:layout_width="0dp"
+            android:drawableRight="@mipmap/icon_35"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_qr"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/icon_39"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+
+</layout>
+
+

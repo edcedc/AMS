@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.yyc.ams.ui.newfrg.RfidFileFrg.ProxyClick" />
+
+        <variable
+            name="viewmodel"
+            type="com.yyc.ams.viewmodel.RfidFileModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/w_f4f9fd"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="MissingConstraints">
+
+        <com.flyco.roundview.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius="60dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_41" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_42"
+                android:onClick="@{() -> click.toSearch()}"
+                android:src="?android:attr/selectableItemBackgroundBorderless" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@mipmap/icon_43"
+                android:onClick="@{() -> click.addRfid()}"
+                android:src="?android:attr/selectableItemBackgroundBorderless" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@mipmap/icon_44"
+                android:onClick="@{() -> click.onConfig()}"
+                android:src="?android:attr/selectableItemBackgroundBorderless" />
+
+        </com.flyco.roundview.RoundLinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/rfid_list"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/i_rfid_file" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/include_sel"
+            layout="@layout/p_rfid_sel" />
+
+    </LinearLayout>
+
+
+</layout>

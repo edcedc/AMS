@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navation"
+    app:startDestination="@id/orderFrg">
+
+    <fragment
+        android:id="@+id/orderFrg"
+        android:name="com.yyc.ams.ui.frg.OrderFrg"
+        android:label="MainFrg">
+
+        <action
+            android:id="@+id/action_orderFrg_to_downloadFrg"
+            app:destination="@id/downloadFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_orderFrg_to_assetFrg"
+            app:destination="@id/assetFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_orderFrg_to_uploadFrg"
+            app:destination="@id/uploadFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/downloadFrg"
+        android:name="com.yyc.ams.ui.frg.DownloadFrg"
+        android:label="DownloadFrg" />
+
+    <fragment
+        android:id="@+id/uploadFrg"
+        android:name="com.yyc.ams.ui.frg.UploadFrg"
+        android:label="UploadFrg" />
+
+    <fragment
+        android:id="@+id/assetFrg"
+        android:name="com.yyc.ams.ui.frg.AssetFrg"
+        android:label="AssetFrg">
+
+        <action
+            android:id="@+id/action_assetFrg_to_assetDetailsFrg"
+            app:destination="@id/assetDetailsFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/assetDetailsFrg"
+        android:name="com.yyc.ams.ui.frg.AssetDetailsFrg"
+        android:label="AssetDetailsFrg" />
+
+    <fragment
+        android:id="@+id/externalFrg"
+        android:name="com.yyc.ams.ui.frg.ExternalFrg"
+        android:label="ExternalBaorrowFrg" >
+
+        <action
+            android:id="@+id/action_externalFrg_to_externalFrg2"
+            app:destination="@id/externalFrg2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/internalBaorrowFrg"
+        android:name="com.yyc.ams.ui.frg.InternalFrg"
+        android:label="InternalBaorrowFrg" />
+
+    <fragment
+        android:id="@+id/disposalFrg"
+        android:name="com.yyc.ams.ui.frg.DisposalFrg"
+        android:label="DisposalFrg" >
+
+        <action
+            android:id="@+id/action_disposalFrg_to_disposal2Frg"
+            app:destination="@id/disposal2Frg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/disposal2Frg"
+        android:name="com.yyc.ams.ui.frg.DisposalFrg2"
+        android:label="DisposalFrg" />
+
+    <fragment
+        android:id="@+id/disposalDetailsFrg"
+        android:name="com.yyc.ams.ui.frg.DisposalDetailsFrg"
+        android:label="DisposalFrg" />
+
+    <fragment
+        android:id="@+id/externalFrg2"
+        android:name="com.yyc.ams.ui.frg.ExternalFrg2"
+        android:label="DisposalFrg" >
+
+        <action
+            android:id="@+id/action_externalFrg2_to_disposalDetailsFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+</navigation>

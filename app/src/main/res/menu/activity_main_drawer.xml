@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/system">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_load"
+                android:icon="@mipmap/icon_27"
+                android:title="@string/download" />
+
+            <item
+                android:id="@+id/nav_upload"
+                android:icon="@mipmap/icon_26"
+                android:title="@string/upload" />
+
+        </menu>
+    </item>
+
+    <!--<item android:title="@string/borrow">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_external_borrow"
+                android:icon="@mipmap/icon_33"
+                android:title="@string/external_borrow" />
+
+            <item
+                android:id="@+id/nav_internal_borrow"
+                android:icon="@mipmap/icon_32"
+                android:title="@string/internal_borrow" />
+
+            <item
+                android:id="@+id/nav_disposal"
+                android:icon="@mipmap/icon_34"
+                android:title="@string/disposal" />
+
+        </menu>
+    </item>-->
+
+    <item android:title="@string/account">
+
+        <menu>
+            <item
+                    android:id="@+id/nav_login"
+                    android:icon="@mipmap/icon_7"
+                    android:title="@string/our_login" />
+        </menu>
+    </item>
+
+</menu>

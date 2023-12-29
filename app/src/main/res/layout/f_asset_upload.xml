@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.yyc.ams.viewmodel.AssetUploadModel" />
+
+        <variable
+            name="click"
+            type="com.yyc.ams.ui.frg.AssetUploadFrg.ProxyClick" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:background="@color/white_f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textColor="@color/black_121212"
+                    android:textStyle="bold"
+                    android:text="@string/status"
+                    android:layout_weight="1"
+                    style="@style/Tv15black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:onClick="@{()->click.status()}"
+                    android:text="@={viewmodel.status}"
+                    android:textColor="@color/red_ff0000"
+                    style="@style/Tv15black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white_f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textColor="@color/black_121212"
+                    android:textStyle="bold"
+                    android:text="@string/upload_image"
+                    android:layout_weight="1"
+                    style="@style/Tv15black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="@color/white_f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textColor="@color/black_121212"
+                    android:textStyle="bold"
+                    android:text="@string/remarks"
+                    android:layout_weight="1"
+                    style="@style/Tv15black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:text="@={viewmodel.remarks}"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/hiht_1"
+                    android:textSize="13sp"
+                    android:gravity="top"
+                    android:imeOptions="actionDone"
+                    android:minLines="7"
+                    android:maxLines="7"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+
+            <com.flyco.roundview.RoundTextView
+                android:onClick="@{()->click.save()}"
+                android:text="@string/save"
+                android:layout_marginTop="30dp"
+                app:rv_cornerRadius="5dp"
+                app:rv_backgroundColor="@color/colorPrimaryDark"
+                app:rv_backgroundPressColor="@color/colorPrimary"
+                style="@style/roundTextView" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

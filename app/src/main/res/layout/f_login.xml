@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingConstraints">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.yyc.ams.viewmodel.LoginModel" />
+
+        <variable
+            name="click"
+            type="com.yyc.ams.ui.frg.LoginFrg.ProxyClick" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/iv_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="250dp"
+                android:background="@mipmap/icon_logo"
+                android:layout_height="250dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_16"
+                android:onClick="@{()->click.toSet()}"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="STOCKTAKE"
+                android:id="@+id/tv_title"
+                android:layout_marginTop="10dp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/iv_logo"
+                app:layout_constraintRight_toRightOf="@id/iv_logo"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo"
+                style="@style/Tv12gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="MODULE"
+                android:layout_marginTop="5dp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/iv_logo"
+                app:layout_constraintRight_toRightOf="@id/iv_logo"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                style="@style/Tv12gray" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_blue_border"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/icon_28" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/account"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:text="@={viewmodel.username}"
+                    android:textColor="@color/black_121212"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:onClick="@{()->click.clear()}"
+                    android:src="@mipmap/ic_clear"
+                    android:visibility="@{viewmodel.clearVisible}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_blue_border"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/icon_29" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:text="@={viewmodel.password}"
+                    android:textSize="15sp"
+                    tools:showPwd="@{viewmodel.isShowPwd}" />
+
+                <CheckBox
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:button="@drawable/keyvisibily_selector"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:visibility="@{viewmodel.passwordVisible}"
+                    tools:checkChange="@{click.onCheckedChangeListener}" />
+
+            </LinearLayout>
+
+            <com.flyco.roundview.RoundTextView
+                style="@style/roundTextView"
+                android:layout_marginTop="30dp"
+                android:onClick="@{()->click.login()}"
+                android:text="@string/login"
+                app:rv_backgroundColor="@color/colorPrimary"
+                app:rv_backgroundPressColor="@color/colorPrimaryDark2"
+                app:rv_cornerRadius="5dp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_version"
+            style="@style/Tv12gray"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:text="SP INFINITE TECHNOLOGY LTD"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+
+</layout>
