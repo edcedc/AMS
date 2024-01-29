@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/loginfragment">
+
+    <fragment
+        android:id="@+id/loginfragment"
+        android:name="com.yyc.ams.ui.frg.LoginFrg"
+        android:label="LoginFrg">
+
+        <action
+            android:id="@+id/action_loginfragment_to_settingFrg"
+            app:destination="@id/settingFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingFrg"
+        android:name="com.yyc.ams.ui.frg.SettingFrg"
+        android:label="SettingFrg" />
+
+
+</navigation>

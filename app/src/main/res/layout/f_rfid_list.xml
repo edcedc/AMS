@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.yyc.ams.ui.newfrg.RfidListFrg.ProxyClick" />
+
+        <variable
+            name="viewmodel"
+            type="com.yyc.ams.viewmodel.RfidListModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/w_f4f9fd"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:ignore="MissingConstraints">
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:id="@+id/ly_back"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:rv_backgroundColor="@color/white"
+                app:rv_cornerRadius="60dp">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:onClick="@{()->click.onClose()}"
+                    android:background="@mipmap/icon_49" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Tv15gray"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@={viewmodel.backTitle}"
+                    android:onClick="@{()->click.onClose()}"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <FrameLayout
+                    android:onClick="@{()->click.onAdd()}"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/icon_57" />
+
+                </FrameLayout>
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Tv15black"
+                    android:text="EPC" />
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:rv_cornerRadius="20dp"
+                    app:rv_strokeColor="#d8e0f0"
+                    app:rv_strokeWidth="1.5dp">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_text"
+                        android:hint="@string/search_assets"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:completionThreshold="1"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/icon_56" />
+
+                    </FrameLayout>
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Tv15black"
+                    android:layout_weight="1"
+                    android:text="@string/epc_record"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Tv15gray"
+                    android:text="@={viewmodel.parentId}" />
+
+            </LinearLayout>
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:rv_backgroundColor="@color/white"
+                app:rv_cornerRadius="30dp">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        tools:listitem="@layout/i_rfid_list" />
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+        </LinearLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fb_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            app:menu_labels_padding="10dp"
+            app:menu_labels_ellipsize="end"
+            app:menu_labels_singleLine="true"
+            app:menu_colorNormal="@color/colorPrimaryDark"
+            app:menu_colorPressed="@color/colorPrimary"
+            app:menu_colorRipple="@color/colorPrimaryDark2">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fb_rfid"
+                android:onClick="@{()->click.toRfid()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_50"
+                app:fab_size="mini"
+                app:fab_label="@string/rfid_on"
+                app:fab_colorNormal="@color/colorPrimaryDark"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimaryDark2"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:onClick="@{()->click.toSave()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_51"
+                app:fab_size="mini"
+                app:fab_label="Save Excel"
+                app:fab_colorNormal="#00BAAD"
+                app:fab_colorPressed="#26aba2"
+                app:fab_colorRipple="#327d78"/>
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </FrameLayout>
+
+</layout>

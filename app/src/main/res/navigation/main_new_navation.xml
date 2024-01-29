@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/rfidFileFrg">
+
+    <fragment
+        android:id="@+id/rfidFileFrg"
+        android:name="com.yyc.ams.ui.newfrg.RfidFileFrg"
+        android:label="RfidFileFrg">
+
+        <action
+            android:id="@+id/action_rfidFileFrg_to_rfidListFrg"
+            app:destination="@id/rfidListFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_rfidFileFrg_to_searchRfidFrg"
+            app:destination="@id/searchRfidFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rfidListFrg"
+        android:name="com.yyc.ams.ui.newfrg.RfidListFrg"
+        android:label="RfidListFrg" >
+        <action
+            android:id="@+id/action_rfidListFrg_to_searchRfidFrg"
+            app:destination="@id/searchRfidFrg" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchRfidFrg"
+        android:name="com.yyc.ams.ui.newfrg.SearchRfidFrg"
+        android:label="SearchRfidFrg" />
+
+
+
+</navigation>

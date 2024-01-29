@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.yyc.ams",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1,
+<<<<<<< HEAD
+      "versionName": "1.1",
+      "outputFile": "AMS_1.1_release_2024.01.18.apk"
+=======
+      "versionName": "1.0",
+      "outputFile": "AMS_1.0_release_2023.12.28.apk"
+>>>>>>> 5047c2a21cf87d1bd1b2045f95e1c7e282f9ee73
+    }
+  ],
+  "elementType": "File"
+}

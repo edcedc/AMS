@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingConstraints"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.yyc.ams.viewmodel.SettingModel" />
+
+        <variable
+            name="click"
+            type="com.yyc.ams.ui.frg.SettingFrg.ProxyClick" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/iv_logo"
+                android:layout_width="250dp"
+                android:background="@mipmap/icon_40"
+                android:layout_height="250dp" />
+
+            <FrameLayout
+                android:onClick="@{()->click.close()}"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:background="@mipmap/black_close"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="STOCKTAKE"
+                android:id="@+id/tv_title"
+                android:layout_marginTop="10dp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toLeftOf="@id/iv_logo"
+                app:layout_constraintRight_toRightOf="@id/iv_logo"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo"
+                style="@style/Tv12gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_text"
+                android:text="MODULE"
+                android:layout_marginTop="5dp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toLeftOf="@id/iv_logo"
+                app:layout_constraintRight_toRightOf="@id/iv_logo"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                style="@style/Tv12gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:background="@color/colorPrimaryDark"
+            android:paddingRight="40dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.flyco.roundview.RoundTextView
+                android:onClick="@{()-> click.setlanguage()}"
+                android:text="@={viewmodel.language}"
+                android:textSize="15sp"
+                android:gravity="left|center"
+                android:textColor="@android:color/white"
+                app:rv_strokeWidth="1dp"
+                app:rv_strokeColor="@android:color/white"
+                app:rv_backgroundColor="@color/colorPrimaryDark"
+                app:rv_backgroundPressColor="@color/colorPrimary"
+                style="@style/roundTextView" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:text="@={viewmodel.host}"
+                android:layout_marginTop="10dp"
+                android:hint="@string/host"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:singleLine="true"
+                android:background="@drawable/shape_white_border"
+                android:padding="10dp"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:text="@={viewmodel.companyId}"
+                android:layout_marginTop="10dp"
+                android:hint="@string/company_id"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:singleLine="true"
+                android:background="@drawable/shape_white_border"
+                android:padding="10dp"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.flyco.roundview.RoundTextView
+                android:onClick="@{()-> click.setSave()}"
+                android:text="@string/save"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="15dp"
+                app:rv_backgroundColor="@color/white"
+                app:rv_backgroundPressColor="@color/white_f4f4f4"
+                style="@style/roundTextView" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:onClick="@{()->click.setSave()}"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="bottom|center"
+                android:text="SP INFINITE TECHNOLOGY LTD"
+                android:textColor="@android:color/white"
+                style="@style/Tv12black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

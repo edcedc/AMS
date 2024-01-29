@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/orderFrg">
+
+    <fragment
+        android:id="@+id/orderFrg"
+        android:name="com.yyc.ams.ui.frg.OrderFrg"
+        android:label="MainFrg">
+
+        <action
+            android:id="@+id/action_orderFrg_to_downloadFrg"
+            app:destination="@id/downloadFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_orderFrg_to_assetFrg"
+            app:destination="@id/assetFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_orderFrg_to_uploadFrg"
+            app:destination="@id/uploadFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/downloadFrg"
+        android:name="com.yyc.ams.ui.frg.DownloadFrg"
+        android:label="DownloadFrg" />
+
+    <fragment
+        android:id="@+id/uploadFrg"
+        android:name="com.yyc.ams.ui.frg.UploadFrg"
+        android:label="UploadFrg" />
+
+    <fragment
+        android:id="@+id/assetFrg"
+        android:name="com.yyc.ams.ui.frg.AssetFrg"
+        android:label="AssetFrg">
+
+        <action
+            android:id="@+id/action_assetFrg_to_assetDetailsFrg"
+            app:destination="@id/assetDetailsFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/assetDetailsFrg"
+        android:name="com.yyc.ams.ui.frg.AssetDetailsFrg"
+        android:label="AssetDetailsFrg" />
+
+</navigation>

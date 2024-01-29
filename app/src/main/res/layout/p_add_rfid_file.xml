@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    app:rv_backgroundColor="@color/white"
+    app:rv_cornerRadius="30dp">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_rfid"
+            android:textColor="@color/black_0A1629"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/iv_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_48" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/Tv15gray"
+        android:layout_marginTop="25dp"
+        android:text="@string/title"
+        android:textColor="@color/_xpopup_content_color" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_optional"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_gray_round"
+        android:maxLength="20"
+        android:hint="@string/optional"
+        android:textSize="15sp" />
+
+    <TextView
+        style="@style/Tv15gray"
+        android:maxLength="20"
+        android:layout_marginTop="25dp"
+        android:text="@string/location"
+        android:textColor="@color/_xpopup_content_color" />
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:rv_cornerRadius="30dp"
+        app:rv_strokeColor="@color/gray_91929E"
+        app:rv_strokeWidth="1dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_location"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/optional"
+            android:lines="1"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:background="@mipmap/icon_47"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+    </com.flyco.roundview.RoundLinearLayout>
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/tv_confirm"
+        android:layout_marginTop="45dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/text10"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:rv_backgroundColor="@color/colorPrimaryDark"
+        app:rv_backgroundPressColor="@color/colorPrimary"
+        app:rv_cornerRadius="30dp" />
+
+</com.flyco.roundview.RoundLinearLayout>

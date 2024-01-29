@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name" translatable="false">AMS</string>
+
+    <string name="message_permission_rationale">Grant the following permission to continue the process:\n\n%1$s</string>
+    <string name="message_permission_always_failed">We need the following permission, please enable it for us in the settings:\n\n%1$s</string>
+    <string name="setting" translateable="false">Setting</string>
+    <string name="resume" translatable="false">Retry</string>
+    <string name="cancel" translatable="false">Cancel</string>
+
+    <string name="account" translatable="false">Account</string>
+    <string name="password" translateable="false" translatable="false">Password</string>
+    <string name="login" translatable="false">LOGIN</string>
+
+    <string name="error_phone" translatable="false">Incorrect username or password</string>
+    <string name="hiht_" translatable="false">Please enter complete</string>
+    <string name="hiht_1" translateable="false">please enter</string>
+
+    <string name="host" translatable="false">HOST</string>
+    <string name="company_id" translatable="false">CLIENT ID</string>
+    <string name="please_language" translatable="false">Please select a language</string>
+
+    <string name="release_success" translateable="false">Saved successfully</string>
+    <string name="download" translateable="false">Sync Data</string>
+    <string name="upload" translateable="false">Upload</string>
+
+    <string name="start_date" translateable="false">Start date</string>
+    <string name="end_date" translateable="false">End date</string>
+    <string name="update_date" translateable="false">Update date</string>
+    <string name="remarks" translateable="false">Remarks</string>
+    <string name="progress" translateable="false">Progress</string>
+    <string name="title" translateable="false">Title</string>
+    <string name="location" translateable="false">Location</string>
+
+    <string name="system" translateable="false">System</string>
+    <string name="our_login" translateable="false">Log out</string>
+    <string name="full_list" translateable="false">Full list</string>
+    <string name="found" translateable="false">Found</string>
+    <string name="missing" translateable="false">Missing</string>
+    <string name="abnormal" translateable="false">Abnormal</string>
+    <string name="start" translateable="false">Start</string>
+    <string name="stop" translateable="false">Stop</string>
+    <string name="save" translateable="false">Save</string>
+
+    <string name="download1" translateable="false">Downloading data, please keep the network connection, do not exit the application</string>
+
+    <string name="search_assets" translateable="false">Search Rfid</string>
+    <string name="detailed" translateable="false">Details</string>
+    <string name="label_tag" translateable="false">EPC</string>
+    <string name="type" translateable="false">Type</string>
+    <string name="status" translateable="false">Status</string>
+    <string name="upload_image" translateable="false">Image</string>
+    <string name="no_labelTag" translateable="false">No LabelTag</string>
+
+    <string name="no_found1" translateable="false">Whether to confirm all uploads.</string>
+    <string name="text1" translateable="false">Saving, please wait</string>
+    <string name="text2" translateable="false">Click to upload</string>
+    <string name="text3" translatable="false">Upload completed</string>
+    <string name="text4" translatable="false">success</string>
+    <string name="text9" translatable="false">Fail</string>
+
+    <string name="level" translateable="false">level</string>
+    <string name="loading" translatable="false">loading...</string>
+
+    <string name="rfid_list" translatable="false">Rfid List</string>
+    <string name="epc_number" translatable="false">EPC Number</string>
+    <string name="crear_date" translatable="false">Create Date</string>
+    <string name="add_rfid" translatable="false">New Add Rfid</string>
+    <string name="optional" translatable="false">Optional</string>
+    <string name="text10" translatable="false">Confirm start scanning</string>
+    <string name="back_list" translatable="false">Back List</string>
+    <string name="epc_record" translatable="false">EPC Record</string>
+    <string name="rfid_off" translatable="false">RFID - OFF</string>
+    <string name="rfid_on" translatable="false">RFID - ON</string>
+    <string name="text12" translatable="false">Basic parameter configuration</string>
+    <string name="read_power" translatable="false">Read Power</string>
+    <string name="rssi" translatable="false">Search reference value(RSSI)</string>
+    <string name="text13" translatable="false">Environmental attenuation factor</string>
+    <string name="rfid_code" translatable="false">Rfid Code</string>
+    <string name="recipient" translatable="false">Recipient</string>
+    <string name="save_settings" translatable="false">Save Settings</string>
+    <string name="text14" translatable="false">Saving Excel file, Wait..</string>
+    <string name="no_data" translatable="false">No Data</string>
+    <string name="retry" translatable="false">Retry</string>
+    <string name="delete" translatable="false">Delete</string>
+    <string name="mail" translatable="false">Mail</string>
+    <string name="confirm_delete" translatable="false">Confirm delete?</string>
+    <string name="text15" translatable="false">Please enter 「delete」 to confirm deletion</string>
+    <string name="input_error" translatable="false">Input 「delete」 error</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="distance" translatable="false">Distance</string>
+    <string name="no_excel" translatable="false">No Excel File</string>
+    <string name="text16" translatable="false">No email recipients configured</string>
+    <string name="email_format_error" translatable="false">Email format error</string>
+    <string name="seng" translatable="false">Send</string>
+    <string name="select_all" translatable="false">Select all (selected</string>
+    <string name="no_select_file" translatable="false">No Select File</string>
+    <string name="confirm" translatable="false">Confirm</string>
+    <string name="strength" translatable="false">Strength</string>
+    <string name="label_mode" translatable="false">Label mode</string>
+    <string name="single_label" translatable="false">Single Label</string>
+    <string name="double_label" translatable="false">Double Label</string>
+    <string name="search_erroe" translatable="false">Invalid recognition</string>
+    <string name="tag_exists" translatable="false">Tag already exists</string>
+
+
+</resources>

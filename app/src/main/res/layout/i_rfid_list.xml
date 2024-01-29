@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?android:selectableItemBackground"
+    app:rv_cornerRadius="30dp">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.flyco.roundview.RoundLinearLayout
+            app:rv_cornerRadius="30dp"
+            android:layout_marginLeft="5dp"
+            app:rv_backgroundColor="@color/colorPrimaryDark"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_id"
+                style="@style/Tv15gray"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_epc"
+                style="@style/Tv15black"
+                android:textSize="17sp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_date"
+                android:layout_marginTop="5dp"
+                style="@style/Tv15gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.flyco.roundview.RoundLinearLayout>

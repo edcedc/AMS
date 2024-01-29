@@ -1,0 +1,104 @@
+<resources>
+
+    <string name="message_permission_rationale">授予以下權限以繼續該過程：\n\n%1$s</string>
+    <string name="message_permission_always_failed">我們需要以下權限，請在設置中為我們啟用它：\n\n%1$s</string>
+    <string name="setting" translateable="false">設置</string>
+    <string name="resume" translatable="false">重試</string>
+    <string name="cancel" translatable="false">取消</string>
+
+    <string name="account" translatable="false">帳戶</string>
+    <string name="password" translateable="false" translatable="false">密碼</string>
+    <string name="login" translatable="false">登錄</string>
+
+    <string name="error_phone" translatable="false">用戶名或密碼不正確</string>
+    <string name="hiht_" translatable="false">請輸入完整</string>
+    <string name="hiht_1" translateable="false">請輸入</string>
+
+    <string name="host" translatable="false">主機</string>
+    <string name="company_id" translatable="false">公司 ID</string>
+    <string name="please_language" translatable="false">請選擇語言</string>
+
+    <string name="release_success" translateable="false">保存成功</string>
+    <string name="download" translateable="false">同步數據</string>
+    <string name="upload" translateable="false">上傳</string>
+
+    <string name="start_date" translateable="false">開始日期</string>
+    <string name="end_date" translateable="false">結束日期</string>
+    <string name="update_date" translateable="false">更新日期</string>
+    <string name="remarks" translateable="false">備註</string>
+    <string name="progress" translateable="false">進度</string>
+    <string name="title" transable="false">標題</string>
+    <string name="location" translateable="false">位置</string>
+
+    <string name="system" translateable="false">系統</string>
+    <string name="our_login" translateable="false">退出賬號</string>
+    <string name="full_list" translateable="false">全部</string>
+    <string name="found" translateable="false">在庫</string>
+    <string name="missing" translateable="false">缺失</string>
+    <string name="abnormal" transable="false">異常</string>
+    <string name="start" translateable="false">開始</string>
+    <string name="stop" translateable="false">停止</string>
+    <string name="save" translateable="false">保存</string>
+
+    <string name="download1" translateable="false">正在下載數據，請保持網絡連接，不要退出應用</string>
+
+    <string name="search_assets" translateable="false">搜索 Rfid</string>
+    <string name="detailed" translateable="false">詳細信息</string>
+    <string name="label_tag" translateable="false">EPC</string>
+    <string name="type" translateable="false">類型</string>
+    <string name="status" translateable="false">狀態</string>
+    <string name="upload_image" translateable="false">圖片</string>
+    <string name="no_labelTag" translateable="false">沒有 LabelTag</string>
+
+    <string name="no_found1" translateable="false">是否確認所有上傳。 </string>
+    <string name="text1" translateable="false">正在保存，請稍候</string>
+    <string name="text2" translateable="false">點擊上傳</string>
+    <string name="text3" translatable="false">上傳完成</string>
+    <string name="text4" translatable="false">成功</string>
+    <string name="text9" translatable="false">失敗</string>
+
+    <string name="level" translateable="false">等級</string>
+    <string name="loading" translatable="false">加载中...</string>
+
+    <string name="rfid_list" translatable="false">Rfid 清單</string>
+    <string name="epc_number" translatable="false">EPC 數量</string>
+    <string name="crear_date" translatable="false">建立日期</string>
+    <string name="add_rfid" translatable="false">新增 Rfid</string>
+    <string name="optional" translatable="false">可選</string>
+    <string name="text10" translatable="false">確認開始掃描</string>
+    <string name="back_list" translatable="false">返回列表</string>
+    <string name="epc_record" translatable="false">EPC 記錄</string>
+    <string name="rfid_off" translatable="false">RFID - 關閉</string>
+    <string name="rfid_on" translatable="false">RFID - 開啟</string>
+    <string name="text12" translatable="false">基本參數配置</string>
+    <string name="read_power" translatable="false">讀取功率</string>
+    <string name="rssi" translatable="false">搜尋參考值(RSSI)</string>
+    <string name="text13" translatable="false">環境衰減因子</string>
+    <string name="rfid_code" translatable="false">手持機編號</string>
+    <string name="recipient" translatable="false">收件人</string>
+    <string name="save_settings" translatable="false">儲存設定</string>
+    <string name="text14" translatable="false">正在儲存 Excel 文件，等待..</string>
+    <string name="no_data" translatable="false">無資料</string>
+    <string name="retry" translatable="false">重試</string>
+    <string name="delete" translatable="false">刪除</string>
+    <string name="mail" translatable="false">郵件</string>
+    <string name="confirm_delete" translatable="false">確認刪除嗎？ </string>
+    <string name="text15" translatable="false">請輸入「delete」確認刪除</string>
+    <string name="input_error" translatable="false">輸入「delete」錯誤</string>
+    <string name="close" translatable="false">關閉</string>
+    <string name="distance" translatable="false">距離</string>
+    <string name="no_excel" translatable="false">找不到Excel路徑</string>
+    <string name="text16" translatable="false">未在設定找到信箱收件者</string>
+    <string name="email_format_error" translatable="false">郵件信箱格式錯誤</string>
+    <string name="seng" translatable="false">傳送</string>
+    <string name="select_all" translatable="false">全選（已選</string>
+    <string name="no_select_file" translatable="false">請選取</string>
+    <string name="confirm" translatable="false">確認</string>
+    <string name="strength" translatable="false">訊號強度</string>
+    <string name="label_mode" translatable="false">標籤模式</string>
+    <string name="single_label" translatable="false">單標籤</string>
+    <string name="double_label" translatable="false">多標籤</string>
+    <string name="search_erroe" translatable="false">無效識別</string>
+    <string name="tag_exists" translatable="false">LabelTag already exists</string>
+
+</resources>

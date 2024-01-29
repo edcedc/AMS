@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:rv_backgroundColor="@color/white"
+    app:rv_cornerRadius="30dp">
+
+    <com.flyco.roundview.RoundFrameLayout
+        android:id="@+id/fy_sel"
+        android:visibility="gone"
+        android:alpha="0.16"
+        app:rv_backgroundColor="#3F8CFF"
+        app:rv_cornerRadius="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_id"
+            style="@style/Tv15gray"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_0A1629"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/icon_45" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_location"
+                style="@style/Tv15gray"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/gray_91929E" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Tv15gray"
+                    android:text="@string/epc_number" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_epc"
+                    style="@style/Tv15black"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Tv15gray"
+                    android:text="@string/crear_date" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_create"
+                    style="@style/Tv15black"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Tv15gray"
+                    android:text="@string/update_date" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_update"
+                    style="@style/Tv15black"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/iv_set"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_46" />
+
+    </FrameLayout>
+
+
+
+</com.flyco.roundview.RoundFrameLayout>

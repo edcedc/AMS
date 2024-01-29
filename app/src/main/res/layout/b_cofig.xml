@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:rv_backgroundColor="@color/white"
+        app:rv_cornerRadius_TL="30dp"
+        app:rv_cornerRadius_TR="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text12"
+                android:textColor="@color/black_0A1629"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/iv_cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/icon_48" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:layout_marginTop="10dp"
+            android:text="@string/read_power" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_round">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_power"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_raow_selector"
+                android:padding="10dp"
+                android:spinnerMode="dropdown"/>
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:layout_marginTop="15dp"
+            android:text="@string/label_mode" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_round">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_session"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_raow_selector"
+                android:padding="10dp"
+                android:spinnerMode="dropdown" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            android:text="Flag" />
+
+        <FrameLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_round">
+
+            <Spinner
+                android:id="@+id/sp_flag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_raow_selector"
+                android:padding="10dp"
+                android:spinnerMode="dropdown" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            android:text="@string/rssi" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_rssi"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_round"
+            android:padding="10dp"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:hint="1~100"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            android:text="@string/text13" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_eaf"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLength="3"
+            android:hint="1~200"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:background="@drawable/shape_gray_round"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            android:text="@string/strength" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_strength"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLength="3"
+            android:hint="1~200"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:background="@drawable/shape_gray_round"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:layout_marginTop="15dp"
+            android:text="@string/rfid_code" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_rfid_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_round"
+            android:padding="10dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:layout_marginTop="15dp"
+            android:text="@string/recipient" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_round"
+            android:imeOptions="actionDone"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Tv15gray"
+            android:layout_marginTop="15dp"
+            android:text="@string/please_language" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_round">
+
+            <Spinner
+                android:id="@+id/sp_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_raow_selector"
+                android:padding="10dp"
+                android:spinnerMode="dropdown" />
+
+        </FrameLayout>
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/btn_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/save_settings"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:rv_backgroundColor="@color/colorPrimaryDark"
+            app:rv_backgroundPressColor="@color/colorPrimary"
+            app:rv_cornerRadius="15dp" />
+
+    </com.flyco.roundview.RoundLinearLayout>
+
+</androidx.core.widget.NestedScrollView>

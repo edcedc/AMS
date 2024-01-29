@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@drawable/linerlayout_water_selector"
+        android:clickable="true"
+        tools:ignore="MissingConstraints"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_text"
+            android:text="text"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            style="@style/Tv15black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_commit"
+            android:layout_gravity="right"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:text="@string/upload"
+            style="@style/Tv15black" />
+
+</LinearLayout>
